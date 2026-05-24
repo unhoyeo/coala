@@ -22,5 +22,15 @@ def test_fuse_fire_and_water(lab: Lab):
     result = lab.fuse("fire", "water")
     assert result == "steam"
 
+def test_fuse_fire_and_wind(lab: Lab):
+    result = lab.fuse("fire", "wind")
+    assert result == "spark"
 
-# ..
+def test_fuse_fire_and_earth(lab: Lab):
+    result = lab.fuse("fire", "earth")
+    assert result == "magma"
+
+
+# @pytest.mark.asyncio
+# async def test_fusing_fire_earth(tutorial_lab: Lab):
+#     assert await tutorial_lab.fuse("fire", "earth") == "lava"
